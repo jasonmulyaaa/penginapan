@@ -4,7 +4,6 @@ import {getHotel, createHotel, getHotelById, updateHotel, deleteHotel} from '../
 import {getHotelKamar, createHotelKamar, getHotelKamarById, updateHotelKamar, deleteHotelKamar} from '../controller/HotelKamarController.js';
 import {getBooking, createBooking, getBookingById, updateBooking, deleteBooking} from '../controller/BookingController.js';
 import {getSales, getSalesById, createSales, updateSales, deleteSales} from '../controller/SalesController.js';
-import owner from "./Owner.js";
 
 const router = express.Router();
 
@@ -42,9 +41,5 @@ router.get('/sales/:id', getSalesById);
 router.post('/sales', createSales);
 router.put('/sales/:id', updateSales);
 router.delete('/sales/:id', deleteSales);
-
-router.get('/owner', (req, res) => {
-    res.json(owner);
-})
 
 export default router;
